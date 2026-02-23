@@ -8,44 +8,26 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FifteenLoveTranslatorTest {
+public class FifteenAllTranslatorTest {
 
-    static Stream<Arguments> fifteenLoveProvider() {
+    static Stream<Arguments> fifteenAllProvider() {
         return Stream.of(
-                Arguments.of(1, 0)
-        );
-    }
-
-    static Stream<Arguments> loveFifteenProvider() {
-        return Stream.of(
-                Arguments.of(0, 1)
+                Arguments.of(1, 1)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("fifteenLoveProvider")
-    void testPlayerOneScoresOnce_ShouldBeFifteenLove(int player1Score, int player2Score) {
+    @MethodSource("fifteenAllProvider")
+    void testBothPlayersScoreOnce_ShouldBeFifteenAll(int player1Score, int player2Score) {
         //Arrange
-        FifteenLoveTranslator translator = new FifteenLoveTranslator();
+        FifteenAllTranslator translator = new FifteenAllTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Fifteen-Love", result);
+        assertEquals("Fifteen-Fifteen", result);
     }
 
-    @ParameterizedTest
-    @MethodSource("loveFifteenProvider")
-    void testPlayerTwoScoresOnce_ShouldBeLoveFifteen(int player1Score, int player2Score) {
-        //Arrange
-        FifteenLoveTranslator translator = new FifteenLoveTranslator();
-
-        //Act
-        String result = translator.translate(player1Score, player2Score);
-
-        //Assert
-        assertEquals("Love-Fifteen", result);
-    }
 
 }

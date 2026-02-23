@@ -8,44 +8,48 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FifteenFortyTranslatorTest {
+public class AdvantageTranslatorTest {
 
-    static Stream<Arguments> fifteenFortyProvider() {
+    static Stream<Arguments> advantagePlayer1Provider() {
         return Stream.of(
-                Arguments.of(1, 3)
+                Arguments.of(4, 3),
+                Arguments.of(5, 4),
+                Arguments.of(20, 19)
         );
     }
 
-    static Stream<Arguments> fortyFifteenProvider() {
+    static Stream<Arguments> advantagePlayer2Provider() {
         return Stream.of(
-                Arguments.of(3, 1)
+                Arguments.of(3, 4),
+                Arguments.of(4, 5),
+                Arguments.of(19, 20)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("fifteenFortyProvider")
-    void testPlayerOneScoresOnce_ShouldBeFifteenForty(int player1Score, int player2Score) {
+    @MethodSource("advantagePlayer1Provider")
+    void testPlayerOneAdvantageAfterDeuce_ShouldBeAdvantagePlayerOne(int player1Score, int player2Score) {
         //Arrange
-        FifteenFortyTranslator translator = new FifteenFortyTranslator();
+        AdvantageTranslator translator = new AdvantageTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Fifteen-Forty", result);
+        assertEquals("Advantage Player 1", result);
     }
 
     @ParameterizedTest
-    @MethodSource("fortyFifteenProvider")
-    void testPlayerTwoScoresOnce_ShouldBeFortyFifteen(int player1Score, int player2Score) {
+    @MethodSource("advantagePlayer2Provider")
+    void testPlayerTwoAdvantageAfterDeuce_ShouldBeAdvantagePlayerTwo(int player1Score, int player2Score) {
         //Arrange
-        FifteenFortyTranslator translator = new FifteenFortyTranslator();
+        AdvantageTranslator translator = new AdvantageTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Forty-Fifteen", result);
+        assertEquals("Advantage Player 2", result);
     }
 
 }

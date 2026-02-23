@@ -1,34 +1,51 @@
 package org.tenis;
 
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
-
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class LoveLoveTranslatorTest {
+public class FifteenLoveTranslatorTest {
 
-    static Stream<Arguments> loveLoveProvider() {
+    static Stream<Arguments> fifteenLoveProvider() {
         return Stream.of(
-                Arguments.of(0, 0)
+                Arguments.of(1, 0)
+        );
+    }
+
+    static Stream<Arguments> loveFifteenProvider() {
+        return Stream.of(
+                Arguments.of(0, 1)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("loveLoveProvider")
-    void should_return_buzz_when_translate_is_called_with_multiple_of_five(int player1Score, int player2Score) {
+    @MethodSource("fifteenLoveProvider")
+    void testPlayerOneScoresOnce_ShouldBeFifteenLove(int player1Score, int player2Score) {
         //Arrange
-        LoveLoveTranslator translator = new LoveLoveTranslator();
+        FifteenLoveTranslator translator = new FifteenLoveTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Love-Love", result);
+        assertEquals("Fifteen-Love", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("loveFifteenProvider")
+    void testPlayerTwoScoresOnce_ShouldBeLoveFifteen(int player1Score, int player2Score) {
+        //Arrange
+        FifteenLoveTranslator translator = new FifteenLoveTranslator();
+
+        //Act
+        String result = translator.translate(player1Score, player2Score);
+
+        //Assert
+        assertEquals("Love-Fifteen", result);
     }
 
 }

@@ -8,25 +8,44 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FifteenAllTranslatorTest {
+public class ThirtyLoveTranslatorTest {
 
-    static Stream<Arguments> fifteenAllProvider() {
+    static Stream<Arguments> thirtyLoveProvider() {
         return Stream.of(
-                Arguments.of(1, 1)
+                Arguments.of(2, 0)
+        );
+    }
+
+    static Stream<Arguments> loveThirtyProvider() {
+        return Stream.of(
+                Arguments.of(0, 2)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("fifteenAllProvider")
-    void testBothPlayersScoreOnce_ShouldBeFifteenAll(int player1Score, int player2Score) {
+    @MethodSource("thirtyLoveProvider")
+    void testPlayerOneScoresTwice_ShouldBeThirtyLove(int player1Score, int player2Score) {
         //Arrange
-        FifteenAllTranslator translator = new FifteenAllTranslator();
+        ThirtyLoveTranslator translator = new ThirtyLoveTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Fifteen-Fifteen", result);
+        assertEquals("Thirty-Love", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("loveThirtyProvider")
+    void testPlayerTwoScoresTwice_ShouldBeLoveThirty(int player1Score, int player2Score) {
+        //Arrange
+        ThirtyLoveTranslator translator = new ThirtyLoveTranslator();
+
+        //Act
+        String result = translator.translate(player1Score, player2Score);
+
+        //Assert
+        assertEquals("Love-Thirty", result);
     }
 
 

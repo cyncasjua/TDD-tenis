@@ -8,44 +8,44 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ThirtyLoveTranslatorTest {
+public class FortyLoveTranslatorTest {
 
-    static Stream<Arguments> thirtyLoveProvider() {
+    static Stream<Arguments> fortyLoveProvider() {
         return Stream.of(
-                Arguments.of(2, 0)
+                Arguments.of(3, 0)
         );
     }
 
-    static Stream<Arguments> loveThirtyProvider() {
+    static Stream<Arguments> loveFortyProvider() {
         return Stream.of(
-                Arguments.of(0, 2)
+                Arguments.of(0, 3)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("thirtyLoveProvider")
-    void testPlayerOneScoresTwice_ShouldBeThirtyLove(int player1Score, int player2Score) {
+    @MethodSource("fortyLoveProvider")
+    void testPlayerOneScoresTwice_ShouldBeFortyLove(int player1Score, int player2Score) {
         //Arrange
-        ThirtyLoveTranslator translator = new ThirtyLoveTranslator();
+        FortyLoveTranslator translator = new FortyLoveTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Thirty-Love", result);
+        assertEquals("Forty-Love", result);
     }
 
     @ParameterizedTest
-    @MethodSource("loveThirtyProvider")
-    void testPlayerTwoScoresTwice_ShouldBeLoveThirty(int player1Score, int player2Score) {
+    @MethodSource("loveFortyProvider")
+    void testPlayerTwoScoresTwice_ShouldBeLoveForty(int player1Score, int player2Score) {
         //Arrange
-        ThirtyLoveTranslator translator = new ThirtyLoveTranslator();
+        FortyLoveTranslator translator = new FortyLoveTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Love-Thirty", result);
+        assertEquals("Love-Forty", result);
     }
 
 

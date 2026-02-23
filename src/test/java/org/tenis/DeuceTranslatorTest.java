@@ -8,25 +8,46 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FortyAllTranslatorTest {
+public class DeuceTranslatorTest {
 
-    static Stream<Arguments> fortyAllProvider() {
+    static Stream<Arguments> deuceProvider() {
         return Stream.of(
                 Arguments.of(3, 3)
         );
     }
 
+    static Stream<Arguments> advantageLostProvider() {
+        return Stream.of(
+                Arguments.of(4, 4),
+                Arguments.of(5, 5),
+                Arguments.of(20, 20)
+        );
+    }
+
     @ParameterizedTest
-    @MethodSource("fortyAllProvider")
-    void testBothPlayersScoreOnce_ShouldBeFortyAll(int player1Score, int player2Score) {
+    @MethodSource("deuceProvider")
+    void testScoreIsFortyAll_ShouldBeDeuce(int player1Score, int player2Score) {
         //Arrange
-        FortyAllTranslator translator = new FortyAllTranslator();
+        DeuceTranslator translator = new DeuceTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Forty-Forty", result);
+        assertEquals("Deuce", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("advantageLostProvider")
+    void testAdvantageLost_BackToDeuce(int player1Score, int player2Score) {
+        //Arrange
+        DeuceTranslator translator = new DeuceTranslator();
+
+        //Act
+        String result = translator.translate(player1Score, player2Score);
+
+        //Assert
+        assertEquals("Deuce", result);
     }
 
 

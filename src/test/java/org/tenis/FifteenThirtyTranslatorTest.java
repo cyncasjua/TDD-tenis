@@ -8,44 +8,44 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FifteenLoveTranslatorTest {
+public class FifteenThirtyTranslatorTest {
 
-    static Stream<Arguments> fifteenLoveProvider() {
+    static Stream<Arguments> fifteenThirtyProvider() {
         return Stream.of(
-                Arguments.of(1, 0)
+                Arguments.of(1, 2)
         );
     }
 
-    static Stream<Arguments> loveFifteenProvider() {
+    static Stream<Arguments> thirtyFifteenProvider() {
         return Stream.of(
-                Arguments.of(0, 1)
+                Arguments.of(2, 1)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("fifteenLoveProvider")
-    void testPlayerOneScoresOnce_ShouldBeFifteenLove(int player1Score, int player2Score) {
+    @MethodSource("fifteenThirtyProvider")
+    void testPlayerOneScoresOnce_ShouldBeFifteenThirty(int player1Score, int player2Score) {
         //Arrange
-        FifteenLoveTranslator translator = new FifteenLoveTranslator();
+        FifteenThirtyTranslator translator = new FifteenThirtyTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Fifteen-Love", result);
+        assertEquals("Fifteen-Thirty", result);
     }
 
     @ParameterizedTest
-    @MethodSource("loveFifteenProvider")
-    void testPlayerTwoScoresOnce_ShouldBeLoveFifteen(int player1Score, int player2Score) {
+    @MethodSource("thirtyFifteenProvider")
+    void testPlayerTwoScoresOnce_ShouldBeThirtyFifteen(int player1Score, int player2Score) {
         //Arrange
-        FifteenLoveTranslator translator = new FifteenLoveTranslator();
+        FifteenThirtyTranslator translator = new FifteenThirtyTranslator();
 
         //Act
         String result = translator.translate(player1Score, player2Score);
 
         //Assert
-        assertEquals("Love-Fifteen", result);
+        assertEquals("Thirty-Fifteen", result);
     }
 
 }
