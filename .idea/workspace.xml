@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd79baee-7ddf-43b7-b073-f815c66c9d8e" name="Changes" comment="Basic test cases">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tenis/TennisMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/tenis/MatchTranslatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/tenis/SetTranslatorTest.java" afterDir="false" />
+    <list default="true" id="cd79baee-7ddf-43b7-b073-f815c66c9d8e" name="Changes" comment="Advanced test cases">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tenis/FifteenLoveTranslator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tenis/IScoreTranslator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tenis/LoveLoveTranslator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -30,21 +31,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="3A5iS7rZGu67mDXm85YEm9EuDz3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.tenis" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.tenis" />
     </key>
@@ -66,12 +75,21 @@
       <option name="project" value="LOCAL" />
       <updated>1771874071575</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Advanced test cases">
+      <option name="closed" value="true" />
+      <created>1771875625793</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771875625793</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic test cases" />
+    <MESSAGE value="Advanced test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Advanced test cases" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
