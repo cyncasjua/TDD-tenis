@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd79baee-7ddf-43b7-b073-f815c66c9d8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cd79baee-7ddf-43b7-b073-f815c66c9d8e" name="Changes" comment="Basic test cases">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tenis/TennisMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/tenis/MatchTranslatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/tenis/SetTranslatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/AdvantageTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/AdvantageTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/DeuceTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/DeuceTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenAllTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenAllTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenFortyTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenFortyTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenLoveTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenThirtyTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenThirtyTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FortyLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FortyLoveTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/LoveLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/LoveLoveTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyAllTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyAllTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyFortyTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyFortyTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyLoveTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/WinTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/WinTranslatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +58,20 @@
       <option name="presentableId" value="Default" />
       <updated>1771866509228</updated>
     </task>
+    <task id="LOCAL-00001" summary="Basic test cases">
+      <option name="closed" value="true" />
+      <created>1771874071575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771874071575</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic test cases" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
