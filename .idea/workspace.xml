@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd79baee-7ddf-43b7-b073-f815c66c9d8e" name="Changes" comment="Translators finished">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tenis/GameScoreTranslator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/tenis/GameScoreTranslatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/AdvantageTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/AdvantageTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/DeuceTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/DeuceTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenAllTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenAllTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenFortyTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenFortyTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenThirtyTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FifteenThirtyTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/FortyLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/FortyLoveTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/LoveLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/LoveLoveTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/MatchTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/MatchTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyAllTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyAllTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyFortyTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyFortyTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyLoveTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/ThirtyLoveTranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tenis/WinTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tenis/WinTranslatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +52,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AdvantageTranslatorTest.executor": "Run",
     "JUnit.AdvantageTranslatorTest.testPlayerOneAdvantageAfterDeuce_ShouldBeAdvantagePlayerOne.executor": "Run",
     "JUnit.AdvantageTranslatorTest.testPlayerTwoAdvantageAfterDeuce_ShouldBeAdvantagePlayerTwo.executor": "Run",
+    "JUnit.DeuceTranslatorTest.executor": "Run",
     "JUnit.DeuceTranslatorTest.testAdvantageLost_BackToDeuce.executor": "Run",
     "JUnit.DeuceTranslatorTest.testScoreIsFortyAll_ShouldBeDeuce.executor": "Run",
     "JUnit.FifteenAllTranslatorTest.executor": "Run",
@@ -81,7 +93,52 @@
       <recent name="org.tenis" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameScoreTranslatorTest">
+  <component name="RunManager" selected="JUnit.FifteenAllTranslatorTest">
+    <configuration name="AdvantageTranslatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TDD-tenis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tenis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tenis" />
+      <option name="MAIN_CLASS_NAME" value="org.tenis.AdvantageTranslatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeuceTranslatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TDD-tenis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tenis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tenis" />
+      <option name="MAIN_CLASS_NAME" value="org.tenis.DeuceTranslatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FifteenAllTranslatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TDD-tenis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tenis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tenis" />
+      <option name="MAIN_CLASS_NAME" value="org.tenis.FifteenAllTranslatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameScoreTranslatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TDD-tenis" />
       <extension name="coverage">
@@ -112,53 +169,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TennisMatchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TDD-tenis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tenis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.tenis" />
-      <option name="MAIN_CLASS_NAME" value="org.tenis.TennisMatchTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TennisMatchTest.testFullMatchDominoEffect_Player1WinsFlawlessVictory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TDD-tenis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tenis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.tenis" />
-      <option name="MAIN_CLASS_NAME" value="org.tenis.TennisMatchTest" />
-      <option name="METHOD_NAME" value="testFullMatchDominoEffect_Player1WinsFlawlessVictory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TennisMatchTest.testFullMatch_Player2Wins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TDD-tenis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.tenis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.tenis" />
-      <option name="MAIN_CLASS_NAME" value="org.tenis.TennisMatchTest" />
-      <option name="METHOD_NAME" value="testFullMatch_Player2Wins" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FifteenAllTranslatorTest" />
+        <item itemvalue="JUnit.DeuceTranslatorTest" />
+        <item itemvalue="JUnit.AdvantageTranslatorTest" />
         <item itemvalue="JUnit.GameScoreTranslatorTest" />
         <item itemvalue="JUnit.SetTranslatorTest" />
-        <item itemvalue="JUnit.TennisMatchTest.testFullMatch_Player2Wins" />
-        <item itemvalue="JUnit.TennisMatchTest.testFullMatchDominoEffect_Player1WinsFlawlessVictory" />
-        <item itemvalue="JUnit.TennisMatchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771893428970</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Translators finished">
+      <option name="closed" value="true" />
+      <created>1771894405345</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1771894405345</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MatchTranslatorTest {
 
@@ -21,6 +22,15 @@ public class MatchTranslatorTest {
         return Stream.of(
                 Arguments.of(0, 2),
                 Arguments.of(1, 2)
+        );
+    }
+
+    static Stream<Arguments> matchInProgressProvider() {
+        return Stream.of(
+                Arguments.of(0, 0),
+                Arguments.of(1, 0),
+                Arguments.of(0, 1),
+                Arguments.of(1, 1)
         );
     }
 
@@ -48,5 +58,17 @@ public class MatchTranslatorTest {
 
         //Assert
         assertEquals("Player 2 wins match", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("matchInProgressProvider")
+    void testMatchInProgress_ShouldThrowException(int player1Sets, int player2Sets) {
+        //Arrange
+        MatchTranslator translator = new MatchTranslator();
+
+        //Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            translator.translate(player1Sets, player2Sets);
+        });
     }
 }

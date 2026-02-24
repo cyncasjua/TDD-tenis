@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class AdvantageTranslatorTest {
 
@@ -23,6 +24,19 @@ public class AdvantageTranslatorTest {
                 Arguments.of(3, 4),
                 Arguments.of(4, 5),
                 Arguments.of(19, 20)
+        );
+    }
+
+    static Stream<Arguments> notAdvantageProvider() {
+        return Stream.of(
+                Arguments.of(0, 0),
+                Arguments.of(1, 0),
+                Arguments.of(2, 1),
+                Arguments.of(3, 2),
+                Arguments.of(3, 3),
+                Arguments.of(4, 4),
+                Arguments.of(4, 2),
+                Arguments.of(3, 5)
         );
     }
 
@@ -50,6 +64,18 @@ public class AdvantageTranslatorTest {
 
         //Assert
         assertEquals("Advantage Player 2", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("notAdvantageProvider")
+    void testNotAdvantage_ShouldThrowException(int player1Score, int player2Score) {
+        //Arrange
+        AdvantageTranslator translator = new AdvantageTranslator();
+
+        //Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            translator.translate(player1Score, player2Score);
+        });
     }
 
 }

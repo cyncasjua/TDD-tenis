@@ -18,6 +18,22 @@ public class LoveLoveTranslatorTest {
         );
     }
 
+    static Stream<Arguments> notLoveLoveProvider() {
+        return Stream.of(
+                Arguments.of(1, 0),
+                Arguments.of(0, 1),
+                Arguments.of(2, 0),
+                Arguments.of(0, 2),
+                Arguments.of(3, 0),
+                Arguments.of(0, 3),
+
+                Arguments.of(1, 1),
+                Arguments.of(2, 2),
+                Arguments.of(3, 3),
+                Arguments.of(4, 4)
+        );
+    }
+
     @ParameterizedTest
     @MethodSource("loveLoveProvider")
     void shouldReturnLoveLove_OnStart(int player1Score, int player2Score) {
@@ -31,4 +47,15 @@ public class LoveLoveTranslatorTest {
         assertEquals("Love-Love", result);
     }
 
+    @ParameterizedTest
+    @MethodSource("notLoveLoveProvider")
+    void testNotLoveLove_ShouldThrowException(int player1Score, int player2Score) {
+        //Arrange
+        LoveLoveTranslator translator = new LoveLoveTranslator();
+
+        //Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            translator.translate(player1Score, player2Score);
+        });
+    }
 }

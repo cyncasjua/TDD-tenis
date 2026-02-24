@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FifteenFortyTranslatorTest {
 
@@ -19,6 +20,24 @@ public class FifteenFortyTranslatorTest {
     static Stream<Arguments> fortyFifteenProvider() {
         return Stream.of(
                 Arguments.of(3, 1)
+        );
+    }
+
+    static Stream<Arguments> notFifteenFortyProvider() {
+        return Stream.of(
+                Arguments.of(0, 0),
+                Arguments.of(1, 1),
+                Arguments.of(3, 3),
+
+                Arguments.of(1, 0),
+                Arguments.of(1, 2),
+                Arguments.of(0, 1),
+                Arguments.of(2, 1),
+
+                Arguments.of(3, 0),
+                Arguments.of(3, 2),
+                Arguments.of(0, 3),
+                Arguments.of(2, 3)
         );
     }
 
@@ -46,6 +65,18 @@ public class FifteenFortyTranslatorTest {
 
         //Assert
         assertEquals("Forty-Fifteen", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("notFifteenFortyProvider")
+    void testNotFifteenForty_ShouldThrowException(int player1Score, int player2Score) {
+        //Arrange
+        FifteenFortyTranslator translator = new FifteenFortyTranslator();
+
+        //Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            translator.translate(player1Score, player2Score);
+        });
     }
 
 }
