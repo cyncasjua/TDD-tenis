@@ -36,7 +36,9 @@ public class AdvantageTranslatorTest {
                 Arguments.of(3, 3),
                 Arguments.of(4, 4),
                 Arguments.of(4, 2),
-                Arguments.of(3, 5)
+                Arguments.of(3, 5),
+                Arguments.of(5, 5),
+                Arguments.of(20, 20)
         );
     }
 

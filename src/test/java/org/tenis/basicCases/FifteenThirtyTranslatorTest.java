@@ -1,4 +1,4 @@
-package org.tenis;
+package org.tenis.basicCases;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -23,21 +23,17 @@ public class FifteenThirtyTranslatorTest {
         );
     }
 
-    static Stream<Arguments> notFifteenLoveProvider() {
+    static Stream<Arguments> notFifteenThirtyProvider() {
         return Stream.of(
                 Arguments.of(0, 0),
                 Arguments.of(1, 1),
                 Arguments.of(2, 2),
-
+                Arguments.of(3, 3),
                 Arguments.of(2, 0),
-                Arguments.of(3, 0),
                 Arguments.of(0, 2),
-                Arguments.of(0, 3),
-
-                Arguments.of(1, 2),
-                Arguments.of(1, 3),
-                Arguments.of(2, 1),
-                Arguments.of(3, 1)
+                Arguments.of(1, 0),
+                Arguments.of(0, 1),
+                Arguments.of(19, 20)
         );
     }
 
@@ -68,10 +64,10 @@ public class FifteenThirtyTranslatorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("notFifteenLoveProvider")
-    void testNotFifteenLove_ShouldThrowException(int player1Score, int player2Score) {
+    @MethodSource("notFifteenThirtyProvider")
+    void testNotFifteenThirty_ShouldThrowException(int player1Score, int player2Score) {
         //Arrange
-        FifteenLoveTranslator translator = new FifteenLoveTranslator();
+        FifteenThirtyTranslator translator = new FifteenThirtyTranslator();
 
         //Act & Assert
         assertThrows(IllegalArgumentException.class, () -> {

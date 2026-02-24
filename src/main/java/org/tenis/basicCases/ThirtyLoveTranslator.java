@@ -1,6 +1,8 @@
-package org.tenis;
+package org.tenis.basicCases;
 
-public class ThirtyLoveTranslator implements IScoreTranslator{
+import org.tenis.IScoreTranslator;
+
+public class ThirtyLoveTranslator implements IScoreTranslator {
 
     @Override
     public boolean applies(int player1Score, int player2Score) {

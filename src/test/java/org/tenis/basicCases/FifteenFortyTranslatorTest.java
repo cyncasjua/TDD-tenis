@@ -1,4 +1,4 @@
-package org.tenis;
+package org.tenis.basicCases;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -37,7 +37,8 @@ public class FifteenFortyTranslatorTest {
                 Arguments.of(3, 0),
                 Arguments.of(3, 2),
                 Arguments.of(0, 3),
-                Arguments.of(2, 3)
+                Arguments.of(2, 3),
+                Arguments.of(20, 19)
         );
     }
 

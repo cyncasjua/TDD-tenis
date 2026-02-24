@@ -25,20 +25,27 @@ public class TennisMatch {
     }
 
     private void checkScore() {
-
         if (winTranslator.applies(p1Points, p2Points)) {
             String gameResult = winTranslator.translate(p1Points, p2Points);
 
-            if (gameResult.equals("Player 1 wins")) p1Games++;
-            else if (gameResult.equals("Player 2 wins")) p2Games++;
+            if (gameResult.equals("Player 1 wins")) {
+                p1Games++;
+            } else {
+                p2Games++;
+            }
 
             resetPoints();
 
             if (setTranslator.applies(p1Games, p2Games)) {
                 String setResult = setTranslator.translate(p1Games, p2Games);
 
-                if (setResult.equals("Player 1 wins set")) { p1Sets++; resetGames(); }
-                else if (setResult.equals("Player 2 wins set")) { p2Sets++; resetGames(); }
+                if (setResult.equals("Player 1 wins set")) {
+                    p1Sets++;
+                    resetGames();
+                } if (setResult.equals("Player 2 wins set")) {
+                    p2Sets++;
+                    resetGames();
+                }
 
                 if (matchTranslator.applies(p1Sets, p2Sets)) {
                     matchWinner = matchTranslator.translate(p1Sets, p2Sets);

@@ -35,7 +35,9 @@ public class DeuceTranslatorTest {
                 Arguments.of(0, 2),
                 Arguments.of(3, 2),
                 Arguments.of(4, 3),
-                Arguments.of(3, 5)
+                Arguments.of(3, 5),
+                Arguments.of(5, 4),
+                Arguments.of(20, 19)
         );
     }
 

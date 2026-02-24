@@ -1,4 +1,6 @@
-package org.tenis;
+package org.tenis.basicCases;
+
+import org.tenis.IScoreTranslator;
 
 public class LoveLoveTranslator implements IScoreTranslator {
 

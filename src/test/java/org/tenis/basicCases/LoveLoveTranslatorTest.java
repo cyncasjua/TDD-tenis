@@ -1,4 +1,4 @@
-package org.tenis;
+package org.tenis.basicCases;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -30,7 +30,8 @@ public class LoveLoveTranslatorTest {
                 Arguments.of(1, 1),
                 Arguments.of(2, 2),
                 Arguments.of(3, 3),
-                Arguments.of(4, 4)
+                Arguments.of(4, 4),
+                Arguments.of(19, 20)
         );
     }
 
