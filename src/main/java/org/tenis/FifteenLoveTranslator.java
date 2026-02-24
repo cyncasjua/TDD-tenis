@@ -10,7 +10,7 @@ public class FifteenLoveTranslator implements IScoreTranslator {
     @Override
     public String translate(int player1Score, int player2Score) {
         if (!applies(player1Score, player2Score)) {
-            throw new IllegalArgumentException("El marcador debe ser 1-0 o 0-1");
+            throw new IllegalArgumentException("Scoreboard must be 1-0 o 0-1");
         }
 
         if (player1Score == 1) {

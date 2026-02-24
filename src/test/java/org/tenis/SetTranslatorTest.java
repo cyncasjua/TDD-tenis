@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SetTranslatorTest {
 
@@ -56,39 +57,91 @@ public class SetTranslatorTest {
         );
     }
 
+    static Stream<Arguments> setInProgressProvider() {
+        return Stream.of(
+                Arguments.of(0, 0),
+                Arguments.of(1, 0),
+                Arguments.of(2, 2),
+                Arguments.of(3, 2),
+                Arguments.of(3, 3)
+        );
+    }
 
     @ParameterizedTest
     @MethodSource("setWinPlayer1Provider")
-    void shouldReturnPlayer1WinsSet(int player1Games, int player2Games) {
+    void testReturnPlayer1WinsSet(int player1Games, int player2Games) {
+        //Arrange
         SetTranslator translator = new SetTranslator();
-        assertEquals("Player 1 wins set", translator.translate(player1Games, player2Games));
+
+        //Act
+        String result = translator.translate(player1Games, player2Games);
+
+        //Assert
+        assertEquals("Player 1 wins set", result);
     }
 
     @ParameterizedTest
     @MethodSource("setWinPlayer2Provider")
-    void shouldReturnPlayer2WinsSet(int player1Games, int player2Games) {
+    void testReturnPlayer2WinsSet(int player1Games, int player2Games) {
+        //Arrange
         SetTranslator translator = new SetTranslator();
-        assertEquals("Player 2 wins set", translator.translate(player1Games, player2Games));
+
+        //Act
+        String result = translator.translate(player1Games, player2Games);
+
+        //Assert
+        assertEquals("Player 2 wins set", result);
     }
 
     @ParameterizedTest
     @MethodSource("setDeuceProvider")
-    void shouldReturnDeuceSet_whenTiedAtFourOrMore(int player1Games, int player2Games) {
+    void testReturnDeuceSet(int player1Games, int player2Games) {
+        //Arrange
         SetTranslator translator = new SetTranslator();
-        assertEquals("Deuce set", translator.translate(player1Games, player2Games));
+
+        //Act
+        String result = translator.translate(player1Games, player2Games);
+
+        //Assert
+        assertEquals("Deuce set", result);
     }
 
     @ParameterizedTest
     @MethodSource("setAdvantagePlayer1Provider")
-    void shouldReturnAdvantagePlayer1Set_whenOneGameAheadAfterThree(int player1Games, int player2Games) {
+    void testReturnAdvantagePlayer1Set(int player1Games, int player2Games) {
+        //Arrange
         SetTranslator translator = new SetTranslator();
-        assertEquals("Advantage Player 1 set", translator.translate(player1Games, player2Games));
+
+        //Act
+        String result = translator.translate(player1Games, player2Games);
+
+        //Assert
+        assertEquals("Advantage Player 1 set", result);
     }
 
     @ParameterizedTest
     @MethodSource("setAdvantagePlayer2Provider")
-    void shouldReturnAdvantagePlayer2Set_whenOneGameAheadAfterThree(int player1Games, int player2Games) {
+    void testReturnAdvantagePlayer2Set(int player1Games, int player2Games) {
+        //Arrange
         SetTranslator translator = new SetTranslator();
-        assertEquals("Advantage Player 2 set", translator.translate(player1Games, player2Games));
+
+        //Act
+        String result = translator.translate(player1Games, player2Games);
+
+        //Assert
+        assertEquals("Advantage Player 2 set", result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("setInProgressProvider")
+    void testSetIsStillInProgress(int player1Games, int player2Games) {
+        //Arrange
+        SetTranslator translator = new SetTranslator();
+
+        //Act
+        String result = translator.translate(player1Games, player2Games);
+
+        //Assert
+        assertEquals("Set in progress", result);
     }
 }
